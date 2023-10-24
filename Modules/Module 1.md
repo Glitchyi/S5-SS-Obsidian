@@ -1,10 +1,13 @@
-| System Software                       | Application Software                    |
-| ------------------------------------- | --------------------------------------- |
-| Runs Independantly                    | Dependant on System Software            |
-| Complex codebase                      | Simple codebase                         |
+## System Software vs Application Software
+#compare
+
+|System Software                        | Application Software                    |
+| -------------------------------------- | --------------------------------------- |
+| Runs Independantly                     | Dependant on System Software            |
+| Complex codebase                       | Simple codebase                         |
 | Usually written in Low level languages | Usually written in high level languages |
-| Relatively low in number              | Abundantly available                    |
-| e.g. gcc, systemctl,                  | e.g. Firefox, Obsidian                                        |
+| Relatively low in number               | Abundantly available                    |
+| e.g. gcc, systemctl,                   | e.g. Firefox, Obsidian                  |
 
 ## Types of System Software
 
@@ -25,6 +28,9 @@
 	- Programs that execute code without compiling them beforehand, they get directly executed.
 	- The interpreter stops only if it encounters an error.
 	- Examples of Interpreted languages: Python, Ruby, PHP
+
+## Compiler Vs Interpreter 
+#compare 
 
 | Compiler                        | Interpreter                                |
 | ------------------------------- | ------------------------------------------ |
@@ -67,9 +73,9 @@
 	- Allows multiple users & programs to access the database simultaneously.
 
 
-# Simplified Instructional Computer ( SIC )
+## Simplified Instructional Computer ( SIC )
 
-## Registers
+### Registers
 There are **5 register**, which have the special uses, Each register is **24 bits** in length
 
 | Mnemonic | Number | Special Use                                                      |
@@ -80,16 +86,16 @@ There are **5 register**, which have the special uses, Each register is **24 bit
 | PC       | 8      | Program Counter; Contain the address for the next instruction    |
 | SW       | 9      | Status Word; Contains a variety of information                                                                 |
 
-## Memory 
+### Memory 
 Memory consist of **8 bit** bytes (one location stores only 8 bits). And three of these bytes form a **word** (24 bits). There are a total of 32768 (2^15) bytes in the computer. Words are addressed by the location of their lowest numbered byte.
 
-## Data format
+### Data format
 - Integers - 24 Bit Binary numbers
 - Negative Numbers are represented by 2's Compliment
 - Character take 8 bits
 - No support for Floating point numbers.
 
-## Instruction Format
+### Instruction Format
 #important
 There is only one instruction format in SIC which has **24 bits**
 
@@ -97,7 +103,7 @@ There is only one instruction format in SIC which has **24 bits**
 | ------ | --- | ------- |
 | 8      | 1   | 15      |
 
-## Addressing Modes
+### Addressing Modes
 There are two addressing modes in SIC
 - Direct addressing mode
 - Indexed addressing mode
@@ -106,7 +112,7 @@ There are two addressing modes in SIC
 | ------- | ---------- | ------------------------------ |
 | Direct  | x = 0      | TA = address                   | 
 | Indexed | x = 1      | TA = address + x               |
-## Instruction Set
+### Instruction Set
 1. **Data Transfer Instructions**
 	- LDA, LDX LDL, STA, STX, STL
 	- LDA {value} - The data in the value is stored to the accumulator.
@@ -126,15 +132,15 @@ There are two addressing modes in SIC
 6. **Subroutine Linkage Instruction**
 	- JSUB {value} - Jump to the subroutine at {value}
 	- RSUB - Return from the subroutine
-7. I/O Instructions
+7. **I/O Instructions**
 	- TD, RD, WD
 	- TD - Test I/O Device
 	  RD - Read from I/O Device
 	  WD - Write to I/O Device
 
-# SIC/XE (Simple Instruction Computer Extended)
+## SIC/XE (Simple Instruction Computer Extended)
 
-## Registers
+### Registers
 There are **9 register**, which have the special uses, Each register is **24 bits** in length, except **F** which is 48 bits.
 
 | Mnemonic | Number | Special Use                                                      |
@@ -148,9 +154,9 @@ There are **9 register**, which have the special uses, Each register is **24 bit
 | S        | 4      | General Register                                                 |
 | T        | 5      | General register                                                 |
 | F        | 6      | Floating point accumulator (48 bits)                                                                 |
-## Memory 
+### Memory 
 Memory consist of **8 bit** bytes (one location stores only 8 bits). And three of these bytes form a **word** (24 bits). There are a total of 1 Megabyte (2^20) bytes in the computer. Words are addressed by the location of their lowest numbered byte.
-## Data format
+### Data format
 - Integers - 24 Bit Binary numbers
 - Negative Numbers are represented by 2's Compliment
 - Character take 8 bits
@@ -162,34 +168,31 @@ Memory consist of **8 bit** bytes (one location stores only 8 bits). And three o
 | s | exponent   |                  fraction                |                    
 | ------ | --- | ------- |
 | 1 | 11   | 36     |
-## Instruction Format
+### Instruction Format
 #important
 There are 4 different instruction format in SIC/XE ranging from 1 byte to 4
-### Format 1 (1 bytes)
-
+#### Format 1 (1 bytes)
 | opcode |
 | ------ |
 | 8      |       
-### Format 2 (2 bytes)
-
+#### Format 2 (2 bytes)
 | opcode | r1   | r2 |
 | ------ | --- | ------- |
 | 8      | 4   | 4     |
-### Format 3 (3 bytes)
-
+#### Format 3 (3 bytes)
 | opcode | n   | i   | x   | b   | p   | e   | displacement |
 | ------ | --- | --- | --- | --- | --- | --- | ------------ |
 | 6      | 1   | 1   | 1   | 1   | 1   | 1   | 12           | 
 
 Value of e is 0
-### Format 4 (4 bytes)
-
+#### Format 4 (4 bytes)
 | opcode | n   | i   | x   | b   | p   | e   | displacement |
 | ------ | --- | --- | --- | --- | --- | --- | ------------ |
 | 6      | 1   | 1   | 1   | 1   | 1   | 1   | 20           | 
 
 Value of e is 1
-## Addressing Modes
+### Addressing Modes
+#important 
 There are two addressing modes in SIC
 - Direct addressing mode
 - Indexed addressing mode
@@ -212,7 +215,7 @@ There are two addressing modes in SIC
 ```
 {} refferns to [] in this table
 ```
-## Instruction Set
+### Instruction Set
 1. **Data Transfer Instructions**
 	- LDA, LDX LDL, STA, STX, STL
 	- LDA {value} - The data in the value is stored to the accumulator.
@@ -235,5 +238,31 @@ There are two addressing modes in SIC
 7. I/O Instructions
 	- TD, RD, WD
 	- TD - Test I/O Device
-	  RD - Read from I/O Device
-	  WD - Write to I/O Device
+	   RD - Read from I/O Device
+	   WD - Write to I/O Device
+
+
+## Assembler Directives
+Assembler Directives are keywords for the assembler to keep track and perform certain tasks during assembly of the program. They are not translated into machine instructions
+
+- **START** - Specify the starting address of the program.
+- **END** - Specify the end of the source program & optionally specifies the first executable instruction in the program.
+- **WORD** - Generate one word integer constant.
+- **BYTE** - Generate character/hexadecimal constant.
+- **RESW** - Reserve the indicated number of words for data access.
+- **RESB** - Reserve the indicated number of bytes for data access.
+
+## SIC vs SIC/XE
+#compare #important 
+
+| Aspect                 | SIC                           | SIC/XE                                                                                |
+| ---------------------- | ----------------------------- | ------------------------------------------------------------------------------------- |
+| Full Form              | Simple Instructional Computer | Simple Instructional Computer eXtended                                                |
+| Instruction Formats    | 3-byte instructions           | 1-byte, 2-byte 3-byte and 4-byte instructions                                         |
+| Registers              | 5 registers (A, X, L, PC, SW) | 9  registers (A, X, L, PC, SW B, S, T,F)                                              |
+| Addressing Modes       | Direct, Indexed               | Direct, Indexed, Base Relative, Program Counter Relative, Immediate, Indirect, Simple |
+| Floating point support | No                            | Yes         (48 Bit)                                                                  |
+| Memory Size            | 32K words (maximum)           | 1 MB (maximum)                                                                         |
+| Instruction Set        | Limited                       | Plenty                                                                                |
+
+
