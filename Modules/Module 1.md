@@ -157,20 +157,20 @@ There are **9 register**, which have the special uses, Each register is **24 bit
 ### Memory 
 Memory consist of **8 bit** bytes (one location stores only 8 bits). And three of these bytes form a **word** (24 bits). There are a total of 1 Megabyte (2^20) bytes in the computer. Words are addressed by the location of their lowest numbered byte.
 ### Data format
-- Integers - 24 Bit Binary numbers
-- Negative Numbers are represented by 2's Compliment
-- Character take 8 bits
+- Integers - 24 Bit binary numbers.
+- Negative Numbers are represented by 2's Compliment.
+- Character take 8 bits.
 - Floating point numbers supported 
-	- The fraction is represented as value between 0 & 1 
-	- The exponent is represented as an unsigned number between 0 & 2047 
-	- s is the sign bit, 0 for positive, 1 for negative
+	- The fraction is represented as value between 0 & 1 .
+	- The exponent is represented as an unsigned number between 0 & 2047 .
+	- s is the sign bit, 0 for positive, 1 for negative.
 
 | s | exponent   |                  fraction                |                    
 | ------ | --- | ------- |
 | 1 | 11   | 36     |
 ### Instruction Format
 #important
-There are 4 different instruction format in SIC/XE ranging from 1 byte to 4
+There are 4 different instruction format in SIC/XE ranging from 1 byte to 4 bytes.
 #### Format 1 (1 bytes)
 | opcode |
 | ------ |
@@ -216,34 +216,45 @@ There are two addressing modes in SIC
 {} refferns to [] in this table
 ```
 ### Instruction Set
+#important 
 1. **Data Transfer Instructions**
 	- LDA, LDX LDL, STA, STX, STL
 	- LDA {value} - The data in the value is stored to the accumulator.
 	- STA {value} - The data from the accumulator is stored to the value.
 2. **Arithmetic Instructions**
 	- ADD, SUB, MUL, DIV
-	- ADD {value} - Adds the data in value to the accumulator 
+	- ADD {value} - Adds the data in value to the accumulator.
 3. **Comparison Instructions**
 	- COMP {value} - The data in the accumulator is compared to the data in the value register and the condition flag in the status word register is set accordingly.
 4. **Conditional Jump Instructions**
 	- JLT, JEQ, JGT
-	- JLT {value} - Jump to {value} if condition code  is set to < 
-	  JEQ {value} - Jump to {value} if condition code  is set to = 
-	  JGT {value} - Jump to {value} if condition code  is set to >
+	- JLT {value} - Jump to {value} if condition code  is set to < .
+	  JEQ {value} - Jump to {value} if condition code  is set to =. 
+	  JGT {value} - Jump to {value} if condition code  is set to >.
 5. **Unconditional Jump Instructions**
-	- J {value} - Jumps to {value} regardless of condition code
+	- J {value} - Jumps to {value} regardless of condition code.
 6. **Subroutine Linkage Instruction**
-	- JSUB {value} - Jump to the subroutine at {value}
-	- RSUB - Return from the subroutine
-7. I/O Instructions
+	- JSUB {value} - Jump to the subroutine at {value}.
+	- RSUB - Return from the subroutine.
+7. **I/O Instructions**
 	- TD, RD, WD
-	- TD - Test I/O Device
-	   RD - Read from I/O Device
-	   WD - Write to I/O Device
+	- TD - Test I/O Device.
+	   RD - Read from I/O Device.
+	   WD - Write to I/O Device.
+8. **Load & Store to Registers**
+	- LDB, STB
+	- LDB {value} - Load data in {value} to B register.
+	- SDB {value} - Load data in B register to {value}.
+9. **Floating Point Arithmetic**
+	- ADDF, SUBF, MULF, DIVF
+	- MULF {value} - Multiplication done with {value} and Floating point accumulator.
+10. **Register to Register Arithmetic**
+	- ADDR, SUBR, MULR, DIVR, RMO
+	- DIVR r1,r2 - The output of **r2/r1**  is stored in r2.
 
 
 ## Assembler Directives
-Assembler Directives are keywords for the assembler to keep track and perform certain tasks during assembly of the program. They are not translated into machine instructions
+Assembler Directives are keywords for the assembler to keep track and perform certain tasks during assembly of the program. They are not translated into machine instructions.
 
 - **START** - Specify the starting address of the program.
 - **END** - Specify the end of the source program & optionally specifies the first executable instruction in the program.
