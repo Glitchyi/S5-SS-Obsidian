@@ -1,4 +1,5 @@
 # Assembler
+#important 
 ### Basic Assembler Functions
 - **Convert mnemonic operation codes** to their machine language equivalents.
 - Convert symbolic operands to their equivalent machine address.
