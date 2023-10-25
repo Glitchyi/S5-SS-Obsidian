@@ -148,12 +148,13 @@ There are **9 register**, which have the special uses, Each register is **24 bit
 | **A**    | 0      | Accumulator; Used for arithmetic operations                      |
 | **X**    | 1      | Index Register; Used for addressing                              |
 | **L**    | 2      | Linkage Register; Used to store return address from a Subroutine |
-| PC       | 8      | Program Counter; Contain the address for the next instruction    |
-| SW       | 9      | Status Word; Contains a variety of information                   |
 | B        | 3      | Base Register; Used for addressing                               |
 | S        | 4      | General Register                                                 |
 | T        | 5      | General register                                                 |
 | F        | 6      | Floating point accumulator (48 bits)                                                                 |
+| PC       | 8      | Program Counter; Contain the address for the next instruction    |
+| SW       | 9      | Status Word; Contains a variety of information                   |
+
 ### Memory 
 Memory consist of **8 bit** bytes (one location stores only 8 bits). And three of these bytes form a **word** (24 bits). There are a total of 1 Megabyte (2^20) bytes in the computer. Words are addressed by the location of their lowest numbered byte.
 ### Data format
@@ -202,15 +203,15 @@ There are two addressing modes in SIC
 - Indirect addressing mode
 - Simple addressing mode
 
-| Mode                     | Indication  | Target addressing caluculation      |
-| ------------------------ | ----------- | ----------------------------------- |
-| Direct                   | x = 0       | {TA} = address                        |
-| Indexed                  | x = 1       | TA = address + x                    |
-| Base Relative            | b=1, p=0    | TA = {B} + disp, 0<= disp<=4095     |
-| Program Counter Relative | b=0, p=1    | TA = {B} + disp, -2048<= disp<=2047 |
-| Immediate                | n=0, i=1    | TA = Operand value                  |
-| Indirect                 | n=1, i=0    | {{TA}} = Operand value              |
-| Simple                   | n=i=0/n=i=1 | {TA} = Operand value                |
+| Mode                     | Indication  | Target addressing caluculation      | Note |
+| ------------------------ | ----------- | ----------------------------------- | ---- |
+| Direct                   | x = 0       | {TA} = address                      |      |
+| Indexed                  | x = 1       | TA = address + x                    |   Makes use of two values separated by ,   |
+| Base Relative            | n=i=1, b=1, p=0  | TA = {B} + disp, 0<= disp<=4095     |      |
+| Program Counter Relative |n=i=1, b=0, p=1    | TA = {B} + disp, -2048<= disp<=2047 |      |
+| Immediate                | n=0, i=1    | TA = Operand value                  |   Uses the # symbol   |
+| Indirect                 | n=1, i=0    | {{TA}} = Operand value              |    Uses the @ symbol  |
+| Simple                   | n=i=0/n=i=1 | {TA} = Operand value                |      |
 
 ```
 {} refferns to [] in this table

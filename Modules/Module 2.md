@@ -113,9 +113,9 @@ BEGIN
 	Write header record to the object program
 	Initialise the first text record
 	WHILE OPCODE != 'END' {
-		IF  not a comment{
-			IF OPCODE in OPTAB{
-				IF a symbol is present in the OPERAND field{
+		IF  not a comment {
+			IF OPCODE in OPTAB {
+				IF a symbol is present in the OPERAND field {
 					IF OPERAND in SYMTAB{
 						Store symbol value as operand address
 					}
@@ -124,11 +124,25 @@ BEGIN
 						Set error flag         // This is an undefined sumbol
 					}
 				}
+				ELSE {
+					Store 0 as operand address
+				}
+				Assemble the object code instruction
 			}
+			ELSE IF OPCODE = 'BYTE' OR 'WORD' {
+				convert constant to object code
+			}
+			IF object code won't fit in the current text record {
+				New recored initialised
+				writing to new record
+			}
+			Add object code to text record
 		}
-		write line to intermediate file
+		write listing line
 		read next input line
 	}
-	write the last line to the intermediate file
-	save the program length = LOCCTR - Starting addr
+	write the last Text record to the object program
+	write the END record to the object program
+	write the last listing line
 ```
+
