@@ -1,0 +1,215 @@
+{
+  "main": {
+    "id": "90f28cf05b0eb104",
+    "type": "split",
+    "children": [
+      {
+        "id": "c0dfd19d86d8e260",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a8b767d1706a382b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Modules/Module 2.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "071900ea217f8e9e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Modules/Module 1.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f3c91726d0b1bf04",
+    "type": "split",
+    "children": [
+      {
+        "id": "2206a90dbd348dcd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e858822437176a0c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "329be946fb80736f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "#comp",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "097e296b5298f44e",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "dfa5840f75622f30",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "a09c00f9f0cbd105",
+    "type": "split",
+    "children": [
+      {
+        "id": "2141774d359fa7f3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "144b634d7c588dd9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Modules/Module 2.md",
+                "collapseAll": true,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "c9bad23e362eb1c5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Modules/Module 2.md",
+                "linksCollapsed": true,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "927a427460a220d4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "bab23734cd3cc270",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Modules/Module 2.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 311.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "graph:Open graph view": false,
+      "switcher:Open quick switcher": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "a8b767d1706a382b",
+  "lastOpenFiles": [
+    "Modules/Module 1.md",
+    "Modules/Module 2.md",
+    "README.md",
+    "Images/Pasted image 20231020191503.png",
+    "Images/Pasted image 20231024195119.png",
+    "Modules/CN Mod 2.md",
+    "Modules/CN Mod 1.md",
+    "Topics/DB Design Guidelines.md",
+    "Topics/NoSQL.md",
+    "Modules/Mod 5.md",
+    "Topics/Schedules.md",
+    "Topics/Transactions.md",
+    "Modules/Mod 4.md",
+    "Topics/Normalization.md",
+    "Images/Guildelins.pdf",
+    "Images/Pasted image 20230713092621.png",
+    "Images/Pasted image 20230713102428.png",
+    "Images/Pasted image 20230713173332.png",
+    "Images/Pasted image 20230713213840.png",
+    "Images/Pasted image 20230713074303.png",
+    "Images/Pasted image 20230713015343.png",
+    "Images/Pasted image 20230712195746.png",
+    "Images/Pasted image 20230712191637.png",
+    "DBMS.md",
+    "Modules/Mod 1.md",
+    "Topics/Physical Data Organization.md",
+    "Modules/Mod 3.md",
+    "Topics/SQL.md",
+    "Modules/Mod 2.md",
+    "Topics/ER Diagrams.md",
+    "Topics/Actors In DB.md",
+    "Topics/Relational Algebra.md",
+    "Topics/Acid Compliancy.md",
+    "Modules/Mod 1.html",
+    "Pasted image 20230712194451.png.md",
+    "Untitled.canvas",
+    "Modules",
+    "Topics",
+    "Blocks.md",
+    "S4.md",
+    "COA/Mod 4.md",
+    "COA"
+  ]
+}
